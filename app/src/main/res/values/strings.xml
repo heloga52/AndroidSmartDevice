@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidSmartDevice</string>
+    <string name="ble_scan_title_pause"> Scan en cours</string>
+    <string name="ble_scan_title_play"> Lancer le Scan BLE</string>
+    <string name="ble_scan_missing" />
+    <string name="connexion"> Connexion</string>
+
 </resources>
