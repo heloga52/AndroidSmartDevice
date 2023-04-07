@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/led3" />
+        app:layout_constraintTop_toBottomOf="@+id/led2" />
 
     <CheckBox
         android:id="@+id/recevoir"
@@ -62,26 +62,26 @@
         android:layout_height="102dp"
         android:layout_marginTop="204dp"
         android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/led3"
+        app:layout_constraintEnd_toStartOf="@+id/led2"
         app:layout_constraintHorizontal_bias="0.645"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/led_icon" />
 
     <ImageView
-        android:id="@+id/led2"
+        android:id="@+id/led3"
         android:layout_width="105dp"
         android:layout_height="102dp"
         android:layout_marginTop="204dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/led3"
+        app:layout_constraintStart_toEndOf="@+id/led2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/led_icon" />
 
     <ImageView
-        android:id="@+id/led3"
+        android:id="@+id/led2"
         android:layout_width="105dp"
         android:layout_height="102dp"
         android:layout_marginTop="204dp"
@@ -100,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/led3" />
+        app:layout_constraintTop_toBottomOf="@+id/led2" />
 
     <TextView
         android:id="@+id/connexion"
@@ -112,5 +112,17 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
+
+    <TextView
+        android:id="@+id/compteurClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="COMPTEUR"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recevoir" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

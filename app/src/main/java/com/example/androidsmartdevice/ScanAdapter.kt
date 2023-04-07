@@ -1,5 +1,6 @@
 package com.example.androidsmartdevice
 
+import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -32,8 +33,9 @@ class ScanAdapter(var devices: ArrayList<BluetoothDevice>, var onDeviceClickList
     override fun getItemCount(): Int = devices.size
 
 
+    @SuppressLint("MissingPermission")
     override fun onBindViewHolder(holder: ScanViewHolder, position: Int) {
-        holder.deviceName.text = devices[position].address
+        holder.deviceName.text = devices[position].name?:"Inconnu"
         holder.itemView.setOnClickListener {
             onDeviceClickListener(devices[position])
         }

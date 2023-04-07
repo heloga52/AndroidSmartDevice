@@ -43,7 +43,10 @@ class ScanActivity : AppCompatActivity() {
         ) { permissions ->
             if (permissions.all { it.value }) {
                 initToggleActions()
-                scanBLEDevices()
+                //scanBLEDevices()
+            }
+            else{
+                Toast.makeText(this,"No permission",Toast.LENGTH_LONG).show()
             }
         }
     private lateinit var binding: ActivityScanBinding
@@ -62,10 +65,11 @@ class ScanActivity : AppCompatActivity() {
             val toast1 =
                 Toast.makeText(applicationContext, "L'appareil est connecté", Toast.LENGTH_LONG)
             toast1.show()
-
             scanDeviceWithPermissions()
+
         } else {
             handleBLENotAvailable()
+
         }
 
     }
@@ -80,6 +84,7 @@ class ScanActivity : AppCompatActivity() {
     }
 
     private fun initToggleActions(){
+
         binding.scanTitle2.setOnClickListener {
             scanBLEDevices()
         }
@@ -148,11 +153,11 @@ class ScanActivity : AppCompatActivity() {
     private fun getAllPermissions(): Array<String> {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             arrayOf(
-                Manifest.permission.BLUETOOTH_ADMIN,
+                //Manifest.permission.BLUETOOTH_ADMIN,
                 Manifest.permission.BLUETOOTH_CONNECT,
                 Manifest.permission.BLUETOOTH_SCAN,
                 Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_BACKGROUND_LOCATION,
+                //Manifest.permission.ACCESS_BACKGROUND_LOCATION,
                 Manifest.permission.ACCESS_COARSE_LOCATION
             )
         } else {
